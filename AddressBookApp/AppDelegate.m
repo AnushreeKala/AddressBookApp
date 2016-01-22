@@ -2,9 +2,8 @@
 //  AppDelegate.m
 //  AddressBookApp
 //
-//  Created by Anushree Kala on 2016-01-16.
+//  Created by Anushree Kala on 2016-01-17.
 //  Copyright © 2016 Kinectic_Cafe. All rights reserved.
-//
 
 #import "AppDelegate.h"
 
@@ -15,9 +14,78 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    _userDataArray = [[NSMutableArray alloc]init];
+    _userData = [[NSMutableDictionary alloc]init];
+
+   [self loadAllContacts];
+    
+    //Customize navigation bar
+    UIImage *navBackgroundImage = [UIImage imageNamed:@"navbar_bg"];
+    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont
+                                                                           fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName,
+                                [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName, nil];
+    
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+    
+    // Change the appearance of back bar button
+    UIImage *backButtonImage = [[UIImage imageNamed:@"button_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 6)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
     return YES;
+}
+
+#pragma mark - Request/Load Random Users Method
+- (void)loadAllContacts {
+    
+    //fetch all data from server and fill the _allUsers array for furthur use.
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+
+       NSError *error;
+
+        NSURL *URL = [NSURL URLWithString:@"http://api.randomuser.me/?results=200&nat=US"];
+            
+                NSString *dataFromURL = [NSString stringWithContentsOfURL:URL
+                                                                 encoding:NSASCIIStringEncoding
+                                                                    error:&error];
+                // Results
+                NSError* err = nil;
+                NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:[dataFromURL dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&err];
+                        
+                    // Sort by Ascending order of name
+                    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"user.name.first"
+                                        ascending:YES];
+            
+                    // Result Users Array
+                    _allUsers = [[jsonData objectForKey:@"results"]
+                                sortedArrayUsingDescriptors: [NSArray arrayWithObject:descriptor]];
+        
+        
+    });
+    
+    //filling _userDataArray which contains only name
+    for(id each in _allUsers) {
+        
+        //Create full name
+        NSString* firstname = [[[[each objectForKey:@"user"] objectForKey:@"name"] objectForKey:@"first"] capitalizedString];
+        NSString* lastname = [[[[each objectForKey:@"user"] objectForKey:@"name"] objectForKey:@"last"] capitalizedString];
+        NSString* fullname = [firstname stringByAppendingString:[NSString stringWithFormat:@" %@", lastname]];
+        
+        [_userDataArray addObject:fullname];
+        
+        //Set person image and name in the dictionary
+        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            NSString *imageURL =  [[[each objectForKey:@"user"] objectForKey:@"picture"]objectForKey:@"thumbnail"];
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
+            [_userData setObject:imageData forKey:fullname];
+           
+        });
+    
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

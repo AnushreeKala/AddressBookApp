@@ -9,11 +9,29 @@
 /* Begin PBXBuildFile section */
 		AD5B00AC1C4B21CB007B574F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B00AB1C4B21CB007B574F /* main.m */; };
 		AD5B00AF1C4B21CB007B574F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B00AE1C4B21CB007B574F /* AppDelegate.m */; };
-		AD5B00B21C4B21CB007B574F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B00B11C4B21CB007B574F /* ViewController.m */; };
 		AD5B00B51C4B21CB007B574F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00B31C4B21CB007B574F /* Main.storyboard */; };
 		AD5B00B81C4B21CB007B574F /* AddressBookApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD5B00B61C4B21CB007B574F /* AddressBookApp.xcdatamodeld */; };
 		AD5B00BA1C4B21CB007B574F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00B91C4B21CB007B574F /* Assets.xcassets */; };
 		AD5B00BD1C4B21CB007B574F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00BB1C4B21CB007B574F /* LaunchScreen.storyboard */; };
+		AD5B00C61C4B222D007B574F /* ContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B00C51C4B222D007B574F /* ContactListViewController.m */; };
+		AD5B00C91C4B2758007B574F /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B00C81C4B2758007B574F /* Contacts.m */; };
+		AD5B00D51C4B317C007B574F /* navbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00CB1C4B317C007B574F /* navbar_bg.png */; };
+		AD5B00D61C4B317C007B574F /* cell_middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00CC1C4B317C007B574F /* cell_middle@2x.png */; };
+		AD5B00D71C4B317C007B574F /* button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00CD1C4B317C007B574F /* button_normal.png */; };
+		AD5B00D81C4B317C007B574F /* cell_top_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00CE1C4B317C007B574F /* cell_top_tile.png */; };
+		AD5B00D91C4B317C007B574F /* navbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00CF1C4B317C007B574F /* navbar_bg@2x.png */; };
+		AD5B00DA1C4B317C007B574F /* cell_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00D01C4B317C007B574F /* cell_bottom.png */; };
+		AD5B00DB1C4B317C007B574F /* cell_top.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00D11C4B317C007B574F /* cell_top.png */; };
+		AD5B00DC1C4B317C007B574F /* cell_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00D21C4B317C007B574F /* cell_bottom@2x.png */; };
+		AD5B00DD1C4B317C007B574F /* cell_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00D31C4B317C007B574F /* cell_top@2x.png */; };
+		AD5B00DE1C4B317C007B574F /* common_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00D41C4B317C007B574F /* common_bg.png */; };
+		AD5B00E51C4B37EE007B574F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B00E41C4B37EE007B574F /* DetailViewController.m */; };
+		AD5B00EC1C4C2403007B574F /* ContactDisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B00EB1C4C2403007B574F /* ContactDisplayCell.m */; };
+		AD5B00EE1C4C39C6007B574F /* button_back.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00ED1C4C39C6007B574F /* button_back.png */; };
+		AD5B00F11C4C7FDE007B574F /* Sms.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00EF1C4C7FDE007B574F /* Sms.jpg */; };
+		AD5B00F21C4C7FDE007B574F /* Call.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00F01C4C7FDE007B574F /* Call.jpg */; };
+		AD5B00F41C4C896F007B574F /* Email.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD5B00F31C4C896F007B574F /* Email.jpg */; };
+		AD5B00F61C4C8C7B007B574F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5B00F51C4C8C7B007B574F /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +39,34 @@
 		AD5B00AB1C4B21CB007B574F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD5B00AD1C4B21CB007B574F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD5B00AE1C4B21CB007B574F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AD5B00B01C4B21CB007B574F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AD5B00B11C4B21CB007B574F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AD5B00B41C4B21CB007B574F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD5B00B71C4B21CB007B574F /* AddressBookApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AddressBookApp.xcdatamodel; sourceTree = "<group>"; };
 		AD5B00B91C4B21CB007B574F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD5B00BC1C4B21CB007B574F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD5B00BE1C4B21CB007B574F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD5B00C41C4B222D007B574F /* ContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListViewController.h; sourceTree = "<group>"; };
+		AD5B00C51C4B222D007B574F /* ContactListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListViewController.m; sourceTree = "<group>"; };
+		AD5B00C71C4B2758007B574F /* Contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contacts.h; sourceTree = "<group>"; };
+		AD5B00C81C4B2758007B574F /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contacts.m; sourceTree = "<group>"; };
+		AD5B00CB1C4B317C007B574F /* navbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_bg.png; sourceTree = "<group>"; };
+		AD5B00CC1C4B317C007B574F /* cell_middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_middle@2x.png"; sourceTree = "<group>"; };
+		AD5B00CD1C4B317C007B574F /* button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_normal.png; sourceTree = "<group>"; };
+		AD5B00CE1C4B317C007B574F /* cell_top_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top_tile.png; sourceTree = "<group>"; };
+		AD5B00CF1C4B317C007B574F /* navbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_bg@2x.png"; sourceTree = "<group>"; };
+		AD5B00D01C4B317C007B574F /* cell_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bottom.png; sourceTree = "<group>"; };
+		AD5B00D11C4B317C007B574F /* cell_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_top.png; sourceTree = "<group>"; };
+		AD5B00D21C4B317C007B574F /* cell_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_bottom@2x.png"; sourceTree = "<group>"; };
+		AD5B00D31C4B317C007B574F /* cell_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cell_top@2x.png"; sourceTree = "<group>"; };
+		AD5B00D41C4B317C007B574F /* common_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_bg.png; sourceTree = "<group>"; };
+		AD5B00E31C4B37EE007B574F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		AD5B00E41C4B37EE007B574F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		AD5B00EA1C4C2403007B574F /* ContactDisplayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDisplayCell.h; sourceTree = "<group>"; };
+		AD5B00EB1C4C2403007B574F /* ContactDisplayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDisplayCell.m; sourceTree = "<group>"; };
+		AD5B00ED1C4C39C6007B574F /* button_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_back.png; sourceTree = "<group>"; };
+		AD5B00EF1C4C7FDE007B574F /* Sms.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sms.jpg; sourceTree = "<group>"; };
+		AD5B00F01C4C7FDE007B574F /* Call.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Call.jpg; sourceTree = "<group>"; };
+		AD5B00F31C4C896F007B574F /* Email.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Email.jpg; sourceTree = "<group>"; };
+		AD5B00F51C4C8C7B007B574F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5B00F61C4C8C7B007B574F /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,13 +102,15 @@
 			children = (
 				AD5B00AD1C4B21CB007B574F /* AppDelegate.h */,
 				AD5B00AE1C4B21CB007B574F /* AppDelegate.m */,
-				AD5B00B01C4B21CB007B574F /* ViewController.h */,
-				AD5B00B11C4B21CB007B574F /* ViewController.m */,
+				AD5B00E61C4B3ADE007B574F /* ContactList */,
+				AD5B00E71C4B3B02007B574F /* DetailView */,
 				AD5B00B31C4B21CB007B574F /* Main.storyboard */,
+				AD5B00CA1C4B313A007B574F /* Images */,
 				AD5B00B91C4B21CB007B574F /* Assets.xcassets */,
 				AD5B00BB1C4B21CB007B574F /* LaunchScreen.storyboard */,
 				AD5B00BE1C4B21CB007B574F /* Info.plist */,
 				AD5B00B61C4B21CB007B574F /* AddressBookApp.xcdatamodeld */,
+				AD5B011A1C4FC120007B574F /* Framework */,
 				AD5B00AA1C4B21CB007B574F /* Supporting Files */,
 			);
 			path = AddressBookApp;
@@ -80,6 +122,58 @@
 				AD5B00AB1C4B21CB007B574F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD5B00CA1C4B313A007B574F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B00EF1C4C7FDE007B574F /* Sms.jpg */,
+				AD5B00F31C4C896F007B574F /* Email.jpg */,
+				AD5B00F01C4C7FDE007B574F /* Call.jpg */,
+				AD5B00ED1C4C39C6007B574F /* button_back.png */,
+				AD5B00CB1C4B317C007B574F /* navbar_bg.png */,
+				AD5B00CC1C4B317C007B574F /* cell_middle@2x.png */,
+				AD5B00CD1C4B317C007B574F /* button_normal.png */,
+				AD5B00CE1C4B317C007B574F /* cell_top_tile.png */,
+				AD5B00CF1C4B317C007B574F /* navbar_bg@2x.png */,
+				AD5B00D01C4B317C007B574F /* cell_bottom.png */,
+				AD5B00D11C4B317C007B574F /* cell_top.png */,
+				AD5B00D21C4B317C007B574F /* cell_bottom@2x.png */,
+				AD5B00D31C4B317C007B574F /* cell_top@2x.png */,
+				AD5B00D41C4B317C007B574F /* common_bg.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		AD5B00E61C4B3ADE007B574F /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B00C71C4B2758007B574F /* Contacts.h */,
+				AD5B00C81C4B2758007B574F /* Contacts.m */,
+				AD5B00C41C4B222D007B574F /* ContactListViewController.h */,
+				AD5B00C51C4B222D007B574F /* ContactListViewController.m */,
+				AD5B00EA1C4C2403007B574F /* ContactDisplayCell.h */,
+				AD5B00EB1C4C2403007B574F /* ContactDisplayCell.m */,
+			);
+			name = ContactList;
+			sourceTree = "<group>";
+		};
+		AD5B00E71C4B3B02007B574F /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B00E31C4B37EE007B574F /* DetailViewController.h */,
+				AD5B00E41C4B37EE007B574F /* DetailViewController.m */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
+		AD5B011A1C4FC120007B574F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B00F51C4C8C7B007B574F /* MessageUI.framework */,
+			);
+			name = Framework;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +233,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5B00F41C4C896F007B574F /* Email.jpg in Resources */,
+				AD5B00D71C4B317C007B574F /* button_normal.png in Resources */,
 				AD5B00BD1C4B21CB007B574F /* LaunchScreen.storyboard in Resources */,
+				AD5B00DD1C4B317C007B574F /* cell_top@2x.png in Resources */,
+				AD5B00F21C4C7FDE007B574F /* Call.jpg in Resources */,
+				AD5B00D61C4B317C007B574F /* cell_middle@2x.png in Resources */,
 				AD5B00BA1C4B21CB007B574F /* Assets.xcassets in Resources */,
+				AD5B00D81C4B317C007B574F /* cell_top_tile.png in Resources */,
+				AD5B00F11C4C7FDE007B574F /* Sms.jpg in Resources */,
+				AD5B00D51C4B317C007B574F /* navbar_bg.png in Resources */,
+				AD5B00DA1C4B317C007B574F /* cell_bottom.png in Resources */,
 				AD5B00B51C4B21CB007B574F /* Main.storyboard in Resources */,
+				AD5B00DE1C4B317C007B574F /* common_bg.png in Resources */,
+				AD5B00D91C4B317C007B574F /* navbar_bg@2x.png in Resources */,
+				AD5B00DB1C4B317C007B574F /* cell_top.png in Resources */,
+				AD5B00EE1C4C39C6007B574F /* button_back.png in Resources */,
+				AD5B00DC1C4B317C007B574F /* cell_bottom@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,10 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD5B00B21C4B21CB007B574F /* ViewController.m in Sources */,
+				AD5B00EC1C4C2403007B574F /* ContactDisplayCell.m in Sources */,
+				AD5B00C61C4B222D007B574F /* ContactListViewController.m in Sources */,
+				AD5B00C91C4B2758007B574F /* Contacts.m in Sources */,
 				AD5B00B81C4B21CB007B574F /* AddressBookApp.xcdatamodeld in Sources */,
 				AD5B00AF1C4B21CB007B574F /* AppDelegate.m in Sources */,
 				AD5B00AC1C4B21CB007B574F /* main.m in Sources */,
+				AD5B00E51C4B37EE007B574F /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +413,7 @@
 				AD5B00C31C4B21CB007B574F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
